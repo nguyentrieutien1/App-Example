@@ -1,0 +1,32 @@
+vi:
+  application:
+    title: "Liên lạc | Khóa học Ruby on Rails"
+    welcome: "Chào mừng bạn đến với ứng dụng"
+    description: "Đây là trang chủ cho  %{link}."
+    language:
+      en: "Tiếng Anh"
+      vi: "Tiếng  Việt"
+  contact:
+    welcome: "Xin chào bạn"
+  header:
+    home_name: "Trang chủ"
+  footer:
+    footer_name: "Chân trang"
+  contact:
+    title_page: "Liên hệ"
+  micropost:
+    title_page: "Danh sách bài đăng"
+    table_headers:
+      id: "#"
+      title: "Tiêu đề"
+      content: "Nội dung"
+  user:
+    title_update_information: "Cập nhật thông tin"
+    title_show_information: "Chi tiết người dùng"
+    information:
+      name: "Tên"
+      age: "Tuổi"
+      email: "Địa chỉ email"
+      date_of_birth: "Sinh nhật"
+      gender: "Giới tính"
+      phone: "Số điện thoại"
