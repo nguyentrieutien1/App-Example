@@ -21,4 +21,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+- Application Config
+    + Using rubocop --only Layout/EndOfLine to add final end line to each file
+    + Add EnforcedStyle: single_quotes to rubocop config file to fix all warning exclude single_quotes suggetion 

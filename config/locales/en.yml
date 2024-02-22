@@ -1,4 +1,5 @@
 en:
+  #PAGES TEXT
   application:
     title: "Contact | Ruby on Rails Tutorial Sample App"
     welcome: "Welcome to the Sample App"
@@ -6,8 +7,6 @@ en:
     language:
       en: "English"
       vi: "Vietnamese"
-  contact:
-    welcome: "Hello guy"
   header:
     home_name: "Home"
   footer:
@@ -30,3 +29,13 @@ en:
       date_of_birth: "Date of birth"
       gender: "Gender"
       phone: "Phone"
+
+  #BUTTON TEXT
+  button:
+    label_name: "user"
+    create: "Create %{name}"
+
+  #CURD MESSAGE
+  create:
+    label_name: "user"
+    success_message: "%{name} has been created"

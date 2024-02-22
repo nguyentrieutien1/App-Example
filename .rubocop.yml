@@ -3,12 +3,20 @@ AllCops:
     - bin/**/*
     - Gemfile
     - config/routes.rb
+    - test/**/*
+    - db/**/*
 Documentation:
   Enabled: false
 
 Metrics/BlockLength:
   Exclude:
     - config/environments/development.rb
- 
+
   Max: 100
-  
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+  Enabled: false
+
+Layout/IndentationWidth:
+  Enabled: true

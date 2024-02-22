@@ -27,7 +27,7 @@ gem "sassc-rails"
 gem "config"
 gem "figaro"
 gem "pg"
-
+gem "bcrypt"
 group :development, :test do
   gem "debug", platforms: %i[mri windows]
 end

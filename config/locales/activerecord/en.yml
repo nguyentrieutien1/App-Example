@@ -1,0 +1,8 @@
+en:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            birthday:
+              birthday_error: "must be within the last 100 years"
