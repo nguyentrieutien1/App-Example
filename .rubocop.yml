@@ -1,0 +1,14 @@
+AllCops:
+  Exclude:
+    - bin/**/*
+    - Gemfile
+    - config/routes.rb
+Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - config/environments/development.rb
+ 
+  Max: 100
+  

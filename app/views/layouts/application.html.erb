@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsTraining</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +10,17 @@
   </head>
 
   <body>
-    <%= yield %>
+  <div class="container">
+    <div>
+      <%= render "layouts/header" %>
+      <%= render "layouts/language" %>
+    </div>
+    <div>
+      <%= yield %>
+    </div>
+    <div>
+      <%= render "layouts/footer" %>
+    </div>
+  </div>
   </body>
 </html>
