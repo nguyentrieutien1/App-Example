@@ -21,7 +21,7 @@ end
 def create_seed_users_data
   10.times do |i|
     i += 1
-    User.create(name: "user #{i}", age: "#{20 + i}", email: "user#{i}@gmail.com", phone: "+840866037302", date_of_birth: "10/11/2000", gender: "#{(i % 2).zero? ? "Male" : "Female"}")
+    User.create(name: "users #{i}", age: "#{20 + i}", email: "users#{i}@gmail.com", phone: "+840866037302", date_of_birth: "10/11/2000", gender: "#{(i % 2).zero? ? "Male" : "Female"}")
   end
 end
 

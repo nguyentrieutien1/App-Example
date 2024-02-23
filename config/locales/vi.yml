@@ -13,6 +13,8 @@ vi:
     footer_name: "Chân trang"
   contact:
     title_page: "Liên hệ"
+  help:
+    title_page: "Hỗ trợ"
   micropost:
     title_page: "Danh sách bài đăng"
     table_headers:
@@ -34,9 +36,24 @@ vi:
   button:
     label_name: "người dùng"
     create: "Tạo %{name}"
+    login: "Đăng nhập !"
 
   #CURD MESSAGE
   create:
     user:
-    label_name: "người dùng"
-    success_message: "Tạo %{name} thành công"
+      label_name: "người dùng"
+      success_message: "Tạo %{name} thành công"
+      fail_message: "Tạo %{name} thất bại, vui lòng nhập lại !"
+
+  #NOTFOUND MESSAGE
+  not_found:
+    user: "Người dùng không được tìm thấy"
+
+  #FORM
+  form:
+    errors: "Biểu mẫu chứa %{count} lỗi."
+    placeholder:
+      name: "Nhập tên"
+      birthday: "Nhập ngày sinh"
+      password: "Nhập mật khẩu"
+      password_confirmation: "Nhập lại mật khẩu"

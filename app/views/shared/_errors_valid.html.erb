@@ -1,0 +1,9 @@
+<% if flash["errors"] %>
+  <% flash["errors"].each do |messages| %>
+    <div class="<%= type == "error" ? "text-danger" : "text-success" %>">
+      <ul>
+        <li><%= messages %></li>
+      </ul>
+    </div>
+  <% end %>
+<% end %>

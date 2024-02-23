@@ -1,0 +1,28 @@
+<div class="col-4" style="margin: auto;">
+  <% if flash["errors_count"].present? %>
+    <div class="alert alert-danger" role="alert">
+      <%= t("form.errors", count: flash["errors_count"]) %>
+    </div>
+  <% end %>
+  <%= render partial: 'shared/errors_valid', locals: { flash: flash, type: "error" } %>
+  <%= form_with(model: @user, url: users_path) do |form| %>
+    <div class="form-group">
+      <label for="name"><%= form.label t(".name") %></label>
+      <input type="text" name="name" id="name" class="form-control" placeholder="<%= t "form.placeholder.name" %>">
+    </div>
+    <div class="form-group">
+      <label for="birthday"> <%= form.label t ".birthday" %></label>
+      <input name="birthday" id="birthday" type="date" class="form-control" placeholder="<%= t "form.placeholder.birthday" %>">
+    </div>
+    <div class="form-group">
+      <label for="password">  <%= form.label t ".password" %></label>
+      <input type="password" id="password" name="password" class="form-control" placeholder="<%= t "form.placeholder.password" %>">
+    </div>
+    <div class="form-group">
+      <label for="password_confirmation"> <%= form.label t ".password_confirmation" %></label>
+      <input type="password" id="password_confirmation" class="form-control" name="password_confirmation" placeholder="<%= t "form.placeholder.password_confirmation" %>">
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">
+      <%= t("button.create", name: t("button.label_name")) %></button>
+  <% end %>
+</div>

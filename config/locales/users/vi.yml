@@ -1,0 +1,7 @@
+vi:
+  users:
+    new:
+      name: "Tên"
+      birthday: "Ngày sinh"
+      password: "Mật khẩu"
+      password_confirmation: "Nhập lại mật khẩu"
