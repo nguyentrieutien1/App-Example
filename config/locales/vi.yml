@@ -1,4 +1,5 @@
 vi:
+  #PAGES TEXT
   application:
     title: "Liên lạc | Khóa học Ruby on Rails"
     welcome: "Chào mừng bạn đến với ứng dụng"
@@ -6,8 +7,6 @@ vi:
     language:
       en: "Tiếng Anh"
       vi: "Tiếng  Việt"
-  contact:
-    welcome: "Xin chào bạn"
   header:
     home_name: "Trang chủ"
   footer:
@@ -30,3 +29,14 @@ vi:
       date_of_birth: "Sinh nhật"
       gender: "Giới tính"
       phone: "Số điện thoại"
+
+  #BUTTON TEXT
+  button:
+    label_name: "người dùng"
+    create: "Tạo %{name}"
+
+  #CURD MESSAGE
+  create:
+    user:
+    label_name: "người dùng"
+    success_message: "Tạo %{name} thành công"

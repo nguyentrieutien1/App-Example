@@ -1,0 +1,8 @@
+vi:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            birthday:
+              birthday_error: "Số tuổi phải bé hơn 100"
