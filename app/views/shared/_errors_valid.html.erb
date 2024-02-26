@@ -1,9 +1,12 @@
-<% if flash["errors"] %>
-  <% flash["errors"].each do |messages| %>
-    <div class="<%= type == "error" ? "text-danger" : "text-success" %>">
-      <ul>
-        <li><%= messages %></li>
-      </ul>
+<% if object.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      <%= t "form.errors", count: pluralize(object.errors.count, "error") %>.
     </div>
-  <% end %>
+    <ul>
+      <% object.errors.full_messages.each do |msg| %>
+        <li class="text-danger"><%= msg.html_safe %></li>
+      <% end %>
+    </ul>
+  </div>
 <% end %>
