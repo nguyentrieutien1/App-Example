@@ -28,6 +28,7 @@ gem "config"
 gem "figaro"
 gem "pg"
 gem "bcrypt"
+gem "gravtastic"
 group :development, :test do
   gem "debug", platforms: %i[mri windows]
 end

@@ -6,3 +6,12 @@ vi:
           attributes:
             birthday:
               birthday_error: "Số tuổi phải bé hơn 100"
+              blank: "không được trống"
+            name:
+              blank: "không được trống"
+              too_short: "quá ngắn"
+            password:
+              blank: "không được trống"
+            password_confirmation:
+              blank: "không được trống"
+              confirmation: "xác nhận không trùng với mật khẩu"
