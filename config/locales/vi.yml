@@ -37,6 +37,8 @@ vi:
     label_name: "người dùng"
     create: "Tạo %{name}"
     login: "Đăng nhập !"
+    logout: "Đăng xuất !"
+    setting: "Cài đặt"
 
   #CURD MESSAGE
   create:

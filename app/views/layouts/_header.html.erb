@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light p-0 m-0 mb-5 ">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -12,6 +12,19 @@
           </a>
         </li>
       </ul>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <%= t "button.setting" %>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <% if logged_in? %>
+            <li><%= link_to t("user.title_show_information"), current_user %></li>
+            <li><%= button_to t("button.logout"), log_out_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to t("button.login"), sessions_new_path %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>

@@ -21,4 +21,15 @@ class User < ApplicationRecord
 
     errors.add(:birthday, :birthday_error)
   end
+
+  def self.digest(string)
+    cost = if ActiveModel::SecurePassword.min_cost
+             BCrypt::Engine::MIN_COST
+           else
+             BCrypt::Engine.cost
+           end
+    BCrypt::Password.create string, cost
+  end
+
+  private_class_method :digest
 end
