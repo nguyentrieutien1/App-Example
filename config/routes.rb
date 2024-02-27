@@ -14,4 +14,9 @@ Rails.application.routes.draw do
 
   # Chapter/7
   get "/sign_up", to: "users#new", as: "sign_up"
+
+  # Chapter/8
+  get "sessions/new"
+  post "sessions/create"
+  delete "sessions/destroy", as: "log_out"
 end

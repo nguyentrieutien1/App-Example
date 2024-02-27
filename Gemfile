@@ -29,6 +29,7 @@ gem "figaro"
 gem "pg"
 gem "bcrypt"
 gem "gravtastic"
+gem "jquery-rails"
 group :development, :test do
   gem "debug", platforms: %i[mri windows]
   gem "pry-byebug"

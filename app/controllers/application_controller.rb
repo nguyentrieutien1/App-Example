@@ -2,6 +2,8 @@
 
 class ApplicationController < ActionController::Base
   before_action :set_locale
+  protect_from_forgery with: :exception
+  include SessionsHelper
 
   def switch_language
     locale = params[:locale]
