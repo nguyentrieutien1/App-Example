@@ -31,6 +31,7 @@ gem "bcrypt"
 gem "gravtastic"
 group :development, :test do
   gem "debug", platforms: %i[mri windows]
+  gem "pry-byebug"
 end
 
 group :development do

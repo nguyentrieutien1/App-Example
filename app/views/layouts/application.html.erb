@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
-
-  <body>
-  <div class="container">
-    <div>
-      <%= render "layouts/header" %>
-      <%= render "layouts/language" %>
-    </div>
-    <div>
-      <%= yield %>
-    </div>
-    <div>
-      <%= render "layouts/footer" %>
-    </div>
+<body>
+<div class="container">
+  <div>
+    <%= render "layouts/header" %>
+    <%= render "layouts/language" %>
   </div>
-  </body>
+  <div>
+    <div class="col-3 m-auto"><%= render partial: "shared/flash_messages" %></div>
+    <%= yield %>
+  </div>
+  <div>
+    <%= render "layouts/footer" %>
+  </div>
+</div>
+</body>
 </html>

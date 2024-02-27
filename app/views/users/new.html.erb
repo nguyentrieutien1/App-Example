@@ -1,11 +1,6 @@
-<div class="col-4" style="margin: auto;">
-  <% if flash["errors_count"].present? %>
-    <div class="alert alert-danger" role="alert">
-      <%= t("form.errors", count: flash["errors_count"]) %>
-    </div>
-  <% end %>
-  <%= render partial: 'shared/errors_valid', locals: { flash: flash, type: "error" } %>
+<div class="col-4 m-auto">
   <%= form_with(model: @user, url: users_path) do |form| %>
+    <%= render partial: 'shared/errors_valid', locals: { object: @user, type: "error" } %>
     <div class="form-group">
       <label for="name"><%= form.label t(".name") %></label>
       <input type="text" name="name" id="name" class="form-control" placeholder="<%= t "form.placeholder.name" %>">
