@@ -39,6 +39,7 @@ vi:
     login: "Đăng nhập !"
     logout: "Đăng xuất !"
     setting: "Cài đặt"
+    remember: "Lưu đăng nhập"
 
   #CURD MESSAGE
   create:

@@ -39,6 +39,7 @@ en:
     login: "Sign in now !"
     logout: "Log out now !"
     setting: "Setting"
+    remember: "Remember me"
 
   #CURD MESSAGE
   create:
