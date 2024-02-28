@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SessionsController < ApplicationController
   before_action :load_user, :handle_failed_login, :check_activated, only: :create
 
@@ -20,7 +22,7 @@ class SessionsController < ApplicationController
 
   private
 
-  def load_user
+  def load_user_and_check_login
     @user = User.find_by(name: params[:name])
     return if @user
 

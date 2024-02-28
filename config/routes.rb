@@ -23,4 +23,6 @@ Rails.application.routes.draw do
   # Chapter/11
   get "activate/:activation_digest", to: "account_activations#edit", as: "activate_user", constraints: { activation_digest: /.*/ }
 
+  # Chapter/12
+  resources :password_resets, except: %i(index show), constraints: { id: /.*/ }
 end

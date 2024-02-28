@@ -38,6 +38,7 @@ vi:
     label_name: "người dùng"
     create: "Tạo %{name}"
     login: "Đăng nhập !"
+    forgot_password: "Quên mật khẩu"
     delete: "Xóa"
     logout: "Đăng xuất !"
     setting: "Cài đặt"
@@ -70,6 +71,7 @@ vi:
     errors: "Biểu mẫu chứa %{count} lỗi."
     placeholder:
       name: "Nhập tên"
+      email: "Nhập email"
       birthday: "Nhập ngày sinh"
       password: "Nhập mật khẩu"
       password_confirmation: "Nhập lại mật khẩu"
@@ -87,7 +89,10 @@ vi:
       activated: "Tài khoản đã kích hoạt"
       active_now: "Kích hoạt ngay"
       invalid_link: "Đường dẫn bị hỏng gòi, OPPS"
+    password_reset:
+      subject: "Vui lòng kiểm tra email để đặt lại mật khẩu"
     title: "Kích hoạt tài khoản của bạn"
+    not_found: "Không tìm thấy địa chỉ email"
     welcome_text: "Xin chào"
     content: "Cảm ơn bạn đã đăng kí, vui lòng kích hoạt đường dẫn bên dưới để kích hoạt !"
     remind: "Nếu bạn không đăng kí, vui lòng bỏ qua thư này"
