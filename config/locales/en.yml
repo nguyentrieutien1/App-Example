@@ -78,3 +78,20 @@ en:
   auth:
     missing_login_message: "First, you need to login !"
     permission_error_message: "You cannot edit this account."
+
+  #EMAIL
+  email:
+    activation:
+      subject: "Check your email to active the account, please !"
+      deactivated: "Account deactivated"
+      activated: "Account activated"
+      active_now: "Active now"
+      invalid_link: "Invalid activation link"
+    title: "Activate Your Account"
+    welcome_text: "Hello"
+    content: "Thanks for signing up! To activate your account, please click the link below"
+    remind: "If you didn't sign up for our service, you can ignore this email"
+
+  #MESSAGE_FROM_SERVER
+  server:
+    error_message: "Server is busy, let relax and comeback to action"

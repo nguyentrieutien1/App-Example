@@ -1,22 +1,16 @@
-# frozen_string_literal: true
-
 class SessionsController < ApplicationController
-  before_action :load_user, only: :create
+  before_action :load_user, :handle_failed_login, :check_activated, only: :create
 
   def new
     @user = User.new
   end
 
   def create
-    if @user.authenticate params[:password]
-      forwarding_url = session[:forwarding_url]
-      reset_session
-      log_in @user
-      params[:remember_me] == "on" ? remember(@user) : forget_user(@user)
-      redirect_to @user, status: :see_other
-    else
-      handle_failed_login
-    end
+    forwarding_url = session[:forwarding_url]
+    reset_session
+    log_in @user
+    params[:remember_me] == "on" ? remember(@user) : forget_user(@user)
+    redirect_to forwarding_url || @user, status: :see_other
   end
 
   def destroy
@@ -28,13 +22,23 @@ class SessionsController < ApplicationController
 
   def load_user
     @user = User.find_by(name: params[:name])
-    return @user if @user
+    return if @user
 
-    handle_failed_login
+    flash.now[:danger] = t "sessions.create.error_login_message"
+    render :new, status: :unprocessable_entity
   end
 
   def handle_failed_login
-    flash.now[:danger] = t "sessions.create.error_login_message"
+    return if @user&.authenticate(params[:password])
+
+    flash.now[:danger] = t("sessions.create.error_login_message")
+    render :new, status: :unprocessable_entity
+  end
+
+  def check_activated
+    return if @user.activated?
+
+    flash.now[:warning] = t("email.activation.deactivated")
     render :new, status: :unprocessable_entity
   end
 end

@@ -1,17 +1,33 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  scope :sorted_by_name, -> { order(name: :asc) }
   has_secure_password
-  attr_accessor :remember_token
+
+  attr_accessor :remember_token, :activation_token
 
   validates :name, presence: true, length: {
     minimum: Settings["MIN_NAME_LENGTH"]
   }
-  before_create :upcase_name
   validates :birthday, presence: true
   validate :birthday_within_last_100_years, if: :birthday
   validates_confirmation_of :password_digest
+
+  before_create :create_activation_digest
+
+  scope :sorted_by_name, -> { order :name }
+
+  def active
+    update_columns(activated: true, activated_at: Time.zone.now)
+  end
+
+  def create_activation_digest
+    self.activation_token = User.new_token
+    self.activation_digest = digest activation_token
+  end
+
+  def send_activation_email
+    UserMailer.account_activation(self).deliver_now
+  end
 
   def remember
     self.remember_token = User.new_token
@@ -22,8 +38,12 @@ class User < ApplicationRecord
     SecureRandom.urlsafe_base64
   end
 
-  def authenticated? remember_token
-    BCrypt::Password.new(remember_digest).is_password? remember_token
+  def authenticated?(attribute, token)
+    digest_num = send("#{attribute}_digest")
+    return false unless digest_num.present?
+
+    bcrypt_password = BCrypt::Password.new digest_num
+    bcrypt_password === token
   end
 
   def forget

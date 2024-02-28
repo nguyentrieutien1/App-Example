@@ -21,5 +21,14 @@ Style/StringLiterals:
 Style/MethodDefParentheses:
   Enabled: false
 
+Style/PercentLiteralDelimiters:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
 Layout/IndentationWidth:
   Enabled: true
