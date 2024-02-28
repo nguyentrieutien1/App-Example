@@ -18,5 +18,8 @@ Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes # hoặc xóa hoàn toàn tùy chọn này
 
+Style/MethodDefParentheses:
+  Enabled: false
+
 Layout/IndentationWidth:
   Enabled: true

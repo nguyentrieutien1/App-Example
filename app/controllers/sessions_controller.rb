@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
     if @user.authenticate params[:password]
       reset_session
       log_in @user
+      params[:remember_me] == "on" ? remember(@user) : forget_user(@user)
       redirect_to @user, status: :see_other
     else
       handle_failed_login
@@ -27,6 +28,7 @@ class SessionsController < ApplicationController
   def load_user
     @user = User.find_by(name: params[:name]&.downcase)
     return @user if @user
+
     handle_failed_login
   end
 
