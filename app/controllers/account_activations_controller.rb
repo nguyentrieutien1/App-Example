@@ -10,6 +10,7 @@ class AccountActivationsController < ApplicationController
       redirect_to @user
     else
       flash[:danger] = t "server.error_message"
+      redirect_to root_path
     end
   end
 
@@ -17,6 +18,7 @@ class AccountActivationsController < ApplicationController
 
   def check_activation
     return if @user.authenticated?(:activation, params[:activation_digest])
+
     handle_invalid_link
   end
 

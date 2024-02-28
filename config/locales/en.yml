@@ -38,6 +38,7 @@ en:
     label_name: "users"
     create: "Create %{name}"
     login: "Sign in now !"
+    forgot_password: "Forgot password"
     delete: "Delete"
     logout: "Log out now !"
     setting: "Setting"
@@ -70,6 +71,7 @@ en:
     errors: "The form contains %{count} errors."
     placeholder:
       name: "Enter name"
+      email: "Enter email"
       birthday: "Enter birthday"
       password: "Enter password"
       password_confirmation: "Enter password confirmtion"
@@ -87,10 +89,14 @@ en:
       activated: "Account activated"
       active_now: "Active now"
       invalid_link: "Invalid activation link"
+    password_reset:
+      subject: "Check your email to reset the password, please"
     title: "Activate Your Account"
+    not_found: "Email address not found"
     welcome_text: "Hello"
     content: "Thanks for signing up! To activate your account, please click the link below"
     remind: "If you didn't sign up for our service, you can ignore this email"
+    expired_time: "Password reset has expired"
 
   #MESSAGE_FROM_SERVER
   server:

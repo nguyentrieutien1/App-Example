@@ -3,18 +3,32 @@
 class User < ApplicationRecord
   has_secure_password
 
-  attr_accessor :remember_token, :activation_token
+  attr_accessor :remember_token, :activation_token, :reset_token
 
   validates :name, presence: true, length: {
     minimum: Settings["MIN_NAME_LENGTH"]
   }
   validates :birthday, presence: true
   validate :birthday_within_last_100_years, if: :birthday
+  validates :password, presence: true
   validates_confirmation_of :password_digest
 
   before_create :create_activation_digest
 
   scope :sorted_by_name, -> { order :name }
+
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_columns reset_digest: digest(reset_digest), reset_sent_at: Time.zone.now
+  end
+
+  def password_reset_expired?
+    self.reset_sent_at < Settings["EXPIRED_TIME_RESET_PASSWORD"].minutes.ago
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
 
   def active
     update_columns(activated: true, activated_at: Time.zone.now)

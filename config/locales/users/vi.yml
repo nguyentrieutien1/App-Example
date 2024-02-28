@@ -2,6 +2,7 @@ vi:
   users:
     form:
       name: "Tên"
+      email: "E-mail"
       birthday: "Ngày sinh"
       password: "Mật khẩu"
       password_confirmation: "Nhập lại mật khẩu"

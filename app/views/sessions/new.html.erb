@@ -13,7 +13,11 @@
       <input type="checkbox" class="form-check-input me-2 remember_me" name="remember_me" id="btncheck1" autocomplete="off">
       <label for="btncheck1"><%= t "button.remember" %></label>
     </div>
-    <button type="submit" class="btn btn-primary mt-3 float-right d-flex float-end">
-      <%= t "button.login" %></button>
+    <div class="d-flex align-items-center justify-content-between">
+      <%= link_to t("button.forgot_password"), new_password_reset_path %>
+      <button type="submit" class="btn btn-primary mt-3 float-right d-flex float-end">
+        <%= t "button.login" %>
+      </button>
+    </div>
   <% end %>
 </div>
