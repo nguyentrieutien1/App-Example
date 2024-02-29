@@ -1,7 +1,10 @@
 en:
   users:
-    new:
+    form:
       name: "Name"
       birthday: "Birthday"
       password: "Password"
       password_confirmation: "Password confirmation"
+    index:
+      name: "Name"
+      birthday: "Birthday"

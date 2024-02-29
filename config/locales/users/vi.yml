@@ -1,7 +1,10 @@
 vi:
   users:
-    new:
+    form:
       name: "Tên"
       birthday: "Ngày sinh"
       password: "Mật khẩu"
       password_confirmation: "Nhập lại mật khẩu"
+    index:
+      name: "Tên"
+      birthday: "Ngày sinh"

@@ -2,3 +2,6 @@ vi:
   sessions:
     create:
       error_login_message: "Tên người dùng hoặc mật khẩu không chính xác"
+    new:
+      name: "Tên"
+      password: "Mật khẩu"

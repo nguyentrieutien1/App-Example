@@ -24,6 +24,7 @@ vi:
   user:
     title_update_information: "Cập nhật thông tin"
     title_show_information: "Chi tiết người dùng"
+    title_all_user: "Danh sách người dùng"
     information:
       name: "Tên"
       age: "Tuổi"
@@ -37,9 +38,11 @@ vi:
     label_name: "người dùng"
     create: "Tạo %{name}"
     login: "Đăng nhập !"
+    delete: "Xóa"
     logout: "Đăng xuất !"
     setting: "Cài đặt"
     remember: "Lưu đăng nhập"
+    update: "Cập nhật người dùng"
 
   #CURD MESSAGE
   create:
@@ -47,6 +50,16 @@ vi:
       label_name: "người dùng"
       success_message: "Tạo %{name} thành công"
       fail_message: "Tạo %{name} thất bại, vui lòng nhập lại !"
+  update:
+    user:
+      label_name: "người dùng"
+      success_message: "Cập nhật %{name} thành công"
+      fail_message: "Cập nhật %{name} thất bại, vui lòng nhập lại !"
+  delete:
+    user:
+      label_name: "người dùng"
+      success_message: "Xóa %{name} thành công"
+      fail_message: "Xóa %{name} thất bại, vui lòng nhập lại !"
 
   #NOTFOUND MESSAGE
   not_found:
@@ -60,3 +73,8 @@ vi:
       birthday: "Nhập ngày sinh"
       password: "Nhập mật khẩu"
       password_confirmation: "Nhập lại mật khẩu"
+
+    #AUTH
+  auth:
+    missing_login_message: "Trước tiên bạn cần phải đăng nhập !"
+    permission_error_message: "Bạn không thể chỉnh sửa tài khoản này"

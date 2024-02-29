@@ -10,13 +10,14 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Chapter/6
-  resources :users, only: %i(create show)
+  resources :users
 
   # Chapter/7
   get "/sign_up", to: "users#new", as: "sign_up"
 
-  # Chapter/8
+  # Chapter/8 + Chapter 9
   get "sessions/new"
   post "sessions/create"
   delete "sessions/destroy", as: "log_out"
+
 end

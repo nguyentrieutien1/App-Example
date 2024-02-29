@@ -1,0 +1,15 @@
+<div class="float-end">
+  <%== pagy_bootstrap_nav(@pagy).html_safe %>
+</div>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col"><%= t ".name" %></th>
+    <th scope="col"><%= t ".birthday" %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= render @users %>
+  </tbody>
+</table>
