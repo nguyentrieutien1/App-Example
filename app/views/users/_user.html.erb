@@ -1,0 +1,14 @@
+<tr>
+  <td>
+    <%= link_to user.id, user %>
+  </td>
+  <td>
+    <%= user.name %>
+  </td>
+  <td>
+    <%= user.birthday %>
+  </td>
+  <td>
+    <%= button_to t("button.delete"), user, method: :delete, class: "btn btn-danger" %>
+  </td>
+</tr>

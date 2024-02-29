@@ -30,6 +30,7 @@ gem "pg"
 gem "bcrypt"
 gem "gravtastic"
 gem "jquery-rails"
+gem "pagy"
 group :development, :test do
   gem "debug", platforms: %i[mri windows]
   gem "pry-byebug"

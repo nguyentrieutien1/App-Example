@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
 
   def create
     if @user.authenticate params[:password]
+      forwarding_url = session[:forwarding_url]
       reset_session
       log_in @user
       params[:remember_me] == "on" ? remember(@user) : forget_user(@user)
@@ -26,7 +27,7 @@ class SessionsController < ApplicationController
   private
 
   def load_user
-    @user = User.find_by(name: params[:name]&.downcase)
+    @user = User.find_by(name: params[:name])
     return @user if @user
 
     handle_failed_login

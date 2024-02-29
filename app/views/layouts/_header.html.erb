@@ -18,7 +18,9 @@
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <% if logged_in? %>
+            <li><%= link_to t("user.title_all_user"), users_path, class: "dropdown-item" %></li>
             <li><%= link_to t("user.title_show_information"), @current_user, class: "dropdown-item" %></li>
+            <li><%= link_to t("user.title_update_information"), edit_user_path(@current_user), class: "dropdown-item" %></li>
             <li><%= button_to t("button.logout"), log_out_path, method: :delete, class: "dropdown-item" %></li>
           <% else %>
             <li><%= link_to t("button.login"), sessions_new_path, class: "dropdown-item" %></li>

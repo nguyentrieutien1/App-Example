@@ -24,6 +24,7 @@ en:
   user:
     title_update_information: "Update information"
     title_show_information: "User detail"
+    title_all_user: "List users"
     information:
       name: "Name"
       age: "Age"
@@ -37,9 +38,11 @@ en:
     label_name: "users"
     create: "Create %{name}"
     login: "Sign in now !"
+    delete: "Delete"
     logout: "Log out now !"
     setting: "Setting"
     remember: "Remember me"
+    update: "Update user"
 
   #CURD MESSAGE
   create:
@@ -47,6 +50,16 @@ en:
       label_name: "users"
       success_message: "%{name} has been created"
       fail_message: "Create user fail, enter again, please !"
+  update:
+    user:
+      label_name: "users"
+      success_message: "%{name} has been updated"
+      fail_message: "Update user fail, enter again, please !"
+  delete:
+    user:
+      label_name: "users"
+      success_message: "%{name} has been deleted"
+      fail_message: "Delete user fail, enter again, please !"
 
   #NOTFOUND MESSAGE
   not_found:
@@ -60,3 +73,8 @@ en:
       birthday: "Enter birthday"
       password: "Enter password"
       password_confirmation: "Enter password confirmtion"
+
+  #AUTH
+  auth:
+    missing_login_message: "First, you need to login !"
+    permission_error_message: "You cannot edit this account."
