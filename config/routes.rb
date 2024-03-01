@@ -13,11 +13,14 @@ Rails.application.routes.draw do
   resources :users
 
   # Chapter/7
-  get "/sign_up", to: "users#new", as: "sign_up"
+  get "sign_up", to: "users#new", as: "sign_up"
 
   # Chapter/8 + Chapter 9
   get "sessions/new"
   post "sessions/create"
   delete "sessions/destroy", as: "log_out"
+
+  # Chapter/11
+  get "activate/:activation_digest", to: "account_activations#edit", as: "activate_user", constraints: { activation_digest: /.*/ }
 
 end

@@ -43,6 +43,17 @@ Rails.application.configure do
 
   config.assets.quiet = true
 
-
   config.action_controller.raise_on_missing_callback_actions = true
+  config.action_mailer.default_url_options = { host: ENV["MACHINE_HOST"] }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: ENV["SMTP_ADDRESS"],
+    port: ENV["SMTP_PORT"],
+    user_name: ENV["EMAIL"],
+    password: ENV["PASSWORD"],
+    authentication: ENV["SMTP_AUTHENTICATION"],
+    ssl: true,
+    tls: true,
+    enable_starttls_auto: true
+  }
 end
