@@ -12,11 +12,10 @@ class PasswordResetsController < ApplicationController
     if @user.create_reset_digest
       @user.send_password_reset_email
       flash[:info] = t "email.password_reset.subject"
-      redirect_to root_path
     else
       flash[:danger] = t "server.error_message"
-      redirect_to root_path
     end
+    redirect_to root_path
   end
 
   def update
@@ -43,7 +42,6 @@ class PasswordResetsController < ApplicationController
 
   def load_user_by_name
     load_user_by_field(:name, params[:name], t("not_found.user"))
-
   end
 
   def load_user_by_reset_digest

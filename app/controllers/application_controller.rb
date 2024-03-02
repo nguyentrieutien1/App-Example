@@ -17,4 +17,12 @@ class ApplicationController < ActionController::Base
   def set_locale
     I18n.locale = session[:locale] || I18n.default_locale
   end
+
+  def logged_in_user
+    return if logged_in?
+
+    store_location
+    flash[:danger] = t "auth.missing_login_message"
+    redirect_to sessions_new_path
+  end
 end

@@ -1,0 +1,6 @@
+<% if @microposts.any? %>
+  <ol class="microposts">
+    <%= render @microposts %>
+  </ol>
+  <%== pagy_bootstrap_nav @pagy %>
+<% end %>

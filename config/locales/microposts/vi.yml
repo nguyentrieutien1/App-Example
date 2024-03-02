@@ -1,0 +1,6 @@
+vi:
+  form:
+    placeholder:
+      content: "Nhập nội dung"
+  invalid_message: "Lỗi xóa bài viết hoặc bạn không có quyền !"
+

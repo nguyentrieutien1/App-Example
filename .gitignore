@@ -41,3 +41,4 @@ config/application.yml
 /.idea/
 /test/
 /.byebug_history
+/storage
