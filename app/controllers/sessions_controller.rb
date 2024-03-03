@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SessionsController < ApplicationController
   before_action :load_user, :handle_failed_login, :check_activated, only: :create
 

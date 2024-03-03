@@ -32,3 +32,6 @@ Metrics/MethodLength:
 
 Layout/IndentationWidth:
   Enabled: true
+
+Style/CaseEquality:
+  Enabled: false

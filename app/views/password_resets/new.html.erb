@@ -1,0 +1,13 @@
+<%= form_with(model: @user, url: password_resets_path) do |form| %>
+  <div class="col-4 m-auto">
+    <div class="form-group">
+      <label for="name"><%= t "users.form.email" %></label>
+      <input type="text" name="name" id="name" class="form-control" placeholder="<%= t "form.placeholder.email" %>">
+    </div>
+    <div class="">
+      <button type="submit" class="btn btn-primary mt-3 float-end">
+        <%= t "button.forgot_password" %>
+      </button>
+    </div>
+  </div>
+<% end %>
