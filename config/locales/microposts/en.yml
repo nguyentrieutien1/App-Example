@@ -1,0 +1,6 @@
+en:
+  form:
+    placeholder:
+      content: "Enter your content"
+  invalid_message: "Micropost invalid"
+

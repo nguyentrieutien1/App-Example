@@ -3,6 +3,8 @@
 class User < ApplicationRecord
   has_secure_password
 
+  has_many :microposts, dependent: :destroy
+
   attr_accessor :remember_token, :activation_token, :reset_token
 
   validates :name, presence: true, length: {
@@ -17,13 +19,17 @@ class User < ApplicationRecord
 
   scope :sorted_by_name, -> { order :name }
 
+  def feed
+    microposts
+  end
+
   def create_reset_digest
     self.reset_token = User.new_token
     update_columns reset_digest: digest(reset_digest), reset_sent_at: Time.zone.now
   end
 
   def password_reset_expired?
-    self.reset_sent_at < Settings["EXPIRED_TIME_RESET_PASSWORD"].minutes.ago
+    reset_sent_at < Settings["EXPIRED_TIME_RESET_PASSWORD"].minutes.ago
   end
 
   def send_password_reset_email

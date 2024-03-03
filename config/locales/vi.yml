@@ -36,6 +36,7 @@ vi:
   #BUTTON TEXT
   button:
     label_name: "người dùng"
+    label_create_micropost: "bài viết"
     create: "Tạo %{name}"
     login: "Đăng nhập !"
     forgot_password: "Quên mật khẩu"
@@ -51,6 +52,9 @@ vi:
       label_name: "người dùng"
       success_message: "Tạo %{name} thành công"
       fail_message: "Tạo %{name} thất bại, vui lòng nhập lại !"
+    microposts:
+      success_message: "Tạo bài viết thành công"
+      fail_message: "Tạo %{name} thất bại, vui lòng nhập lại !"
   update:
     user:
       label_name: "người dùng"
@@ -61,6 +65,9 @@ vi:
       label_name: "người dùng"
       success_message: "Xóa %{name} thành công"
       fail_message: "Xóa %{name} thất bại, vui lòng nhập lại !"
+    micropost:
+      success_message: "Xóa bài viết thành công"
+      fail_message: "Xóa bài viết thất bại, vui lòng nhập lại !"
 
   #NOTFOUND MESSAGE
   not_found:

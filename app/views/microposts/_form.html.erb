@@ -1,0 +1,10 @@
+<%= form_for @micropost do |form| %>
+  <%= render partial: "shared/errors_valid", locals: { object: @micropost } %>
+  <div class="form-group">
+    <label for="name"><%= form.label t(".content") %></label>
+    <textarea name="content" id="name" class="form-control" placeholder="<%= t("form.placeholder.content") %>"></textarea>
+    <span class="image"><%= form.file_field :image, accept: "image/jpeg,image/gif,image/png", class: "mt-3" %></span>
+  </div>
+  <button type="submit" class="btn btn-primary mt-3 float-end">
+    <%= t "button.create", name: t("button.label_create_micropost") %></button>
+<% end %>

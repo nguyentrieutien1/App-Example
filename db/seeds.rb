@@ -25,5 +25,13 @@ def create_seed_users_data
   end
 end
 
-create_seed_users_data
+def create_seed_microposts_data
+  10.times do |i|
+    i += 1
+    Micropost.create(:content => "This is post #{i + 1}", :user_id => 1)
+  end
+end
+
+create_seed_microposts_data
+# create_seed_users_data
 # create_seed_micropost_data

@@ -10,7 +10,9 @@ class UsersController < ApplicationController
     @pagy, @users = pagy User.sorted_by_name, items: Settings["PERPAGE_5"]
   end
 
-  def show; end
+  def show
+    @page, @microposts = pagy @user.microposts, items: Settings["PERPAGE_5"]
+  end
 
   def new
     @user = User.new
@@ -55,14 +57,6 @@ class UsersController < ApplicationController
 
     flash[:danger] = t "auth.permission_error_message"
     redirect_to root_path
-  end
-
-  def logged_in_user
-    return if logged_in?
-
-    store_location
-    flash[:danger] = t "auth.missing_login_message"
-    redirect_to sessions_new_path
   end
 
   def load_user

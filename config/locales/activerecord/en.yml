@@ -14,3 +14,11 @@ en:
               blank: "Can't be blank"
               password_confirmation:
                 confirmation: "Password confirmation doesn't match the password"
+        micropost:
+          attributes:
+            content:
+              blank: "Can't be blank !"
+
+  microposts:
+    form:
+      content: "Content"
