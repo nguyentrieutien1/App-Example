@@ -25,6 +25,7 @@ en:
     title_update_information: "Update information"
     title_show_information: "User detail"
     title_all_user: "List users"
+    view_my_profile: "View my profile"
     information:
       name: "Name"
       age: "Age"
@@ -45,6 +46,8 @@ en:
     setting: "Setting"
     remember: "Remember me"
     update: "Update user"
+    following: "Follow"
+    un_following: "Un Follow"
 
   #CURD MESSAGE
   create:
@@ -72,6 +75,7 @@ en:
   #NOTFOUND MESSAGE
   not_found:
     user: "User not found"
+    record: "Record not found"
 
   #FORM
   form:
@@ -113,4 +117,3 @@ en:
   image:
     valid_message: "Image Must be a valid image format image/jpeg image/gif image/png"
     upload_image_error_message: "should be less than 5MB"
-

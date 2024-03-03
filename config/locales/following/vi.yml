@@ -1,0 +1,6 @@
+vi:
+  following: "Đang theo dõi"
+  followers: "Người theo dõi"
+  followed: "Người dùng này đã được theo dõi"
+  unfollowed: "Người dùng này đã được hủy theo dõi"
+  fail_action: "Xử lý thất bại"

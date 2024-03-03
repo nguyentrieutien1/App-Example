@@ -25,6 +25,7 @@ vi:
     title_update_information: "Cập nhật thông tin"
     title_show_information: "Chi tiết người dùng"
     title_all_user: "Danh sách người dùng"
+    view_my_profile: "Hiển thị hồ sơ"
     information:
       name: "Tên"
       age: "Tuổi"
@@ -45,6 +46,8 @@ vi:
     setting: "Cài đặt"
     remember: "Lưu đăng nhập"
     update: "Cập nhật người dùng"
+    following: "Theo dõi"
+    un_following: "Hủy theo dõi"
 
   #CURD MESSAGE
   create:
@@ -72,6 +75,7 @@ vi:
   #NOTFOUND MESSAGE
   not_found:
     user: "Người dùng không được tìm thấy"
+    record: "Không tìm thấy dữ liệu"
 
   #FORM
   form:

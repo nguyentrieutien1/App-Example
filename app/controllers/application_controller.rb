@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
   protect_from_forgery with: :exception
   include SessionsHelper
+  include ErrorHandlingHelper
   include Pagy::Backend
 
   def switch_language
@@ -13,6 +14,11 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+  def find_by_id_not_found(message)
+    flash[:danger] = message
+    redirect_to root_path
+  end
 
   def set_locale
     I18n.locale = session[:locale] || I18n.default_locale

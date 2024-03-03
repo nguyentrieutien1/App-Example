@@ -6,4 +6,6 @@ en:
   content:
     posted_time: "Posted"
   micropost_empty_list: "Micropost list is empty"
+  micropost_list: "Micropost list"
+  count: "posts number: %{count}"
 

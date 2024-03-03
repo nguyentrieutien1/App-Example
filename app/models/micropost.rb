@@ -7,4 +7,5 @@ class Micropost < ApplicationRecord
   validates :content, presence: true, length: { maximum: Settings["DIGIT_140"] }
   validates :image, content_type: { in: %w[image/jpeg image/gif image/png], message: I18n.t("image.valid_message") }
   scope :recent_posts, -> { order created_at: :desc }
+  scope :relate_post, ->(user_ids) { where(user_id: user_ids) }
 end
