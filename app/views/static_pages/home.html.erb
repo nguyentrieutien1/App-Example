@@ -1,11 +1,15 @@
-<div>
-  <div class="center jumbotron">
-    <h1>
-      <%= t("application.welcome") %>
-    </h1>
-    <h2 class="btn trix-button">
-      <%= t("application.description", link: '<a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>') %>
-    </h2>
-    <%= link_to t("button.login"), "#", class: "btn btn-lg btn-primary" %>
-  </div>
-</div>
+<% if logged_in? %>
+	<%= render "shared/feed" %>
+<% else %>
+	<div>
+		<div class="center jumbotron">
+			<h1>
+				<%= t("application.welcome") %>
+			</h1>
+			<h2 class="btn trix-button">
+				<%= t("application.description", link: link_to(t("application.title"), "http://www.railstutorial.org/")) %>
+			</h2>
+			<%= link_to t("button.login"), "#", class: "btn btn-lg btn-primary" %>
+		</div>
+	</div>
+<% end %>

@@ -25,4 +25,7 @@ Rails.application.routes.draw do
 
   # Chapter/12
   resources :password_resets, except: %i(index show), constraints: { id: /.*/ }
+
+  # Chapter/13
+  resources :microposts, only: %i(new create destroy)
 end

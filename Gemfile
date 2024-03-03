@@ -31,6 +31,10 @@ gem "bcrypt"
 gem "gravtastic"
 gem "jquery-rails"
 gem "pagy"
+gem "image_processing", "1.12.2"
+gem "active_storage_validations", "0.9.8"
+gem "i18n-js"
+
 group :development, :test do
   gem "debug", platforms: %i[mri windows]
   gem "pry-byebug"

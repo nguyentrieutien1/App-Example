@@ -36,6 +36,7 @@ en:
   #BUTTON TEXT
   button:
     label_name: "users"
+    label_create_micropost: "post"
     create: "Create %{name}"
     login: "Sign in now !"
     forgot_password: "Forgot password"
@@ -51,6 +52,9 @@ en:
       label_name: "users"
       success_message: "%{name} has been created"
       fail_message: "Create user fail, enter again, please !"
+    microposts:
+      success_message: "Microposts has been created"
+      fail_message: "Create user fail, enter again, please !"
   update:
     user:
       label_name: "users"
@@ -61,6 +65,9 @@ en:
       label_name: "users"
       success_message: "%{name} has been deleted"
       fail_message: "Delete user fail, enter again, please !"
+    micropost:
+      success_message: "Post has been deleted"
+      fail_message: "Delete post fail, enter again, please !"
 
   #NOTFOUND MESSAGE
   not_found:
@@ -101,3 +108,9 @@ en:
   #MESSAGE_FROM_SERVER
   server:
     error_message: "Server is busy, let relax and comeback to action"
+
+  #IMAGE_VALID
+  image:
+    valid_message: "Image Must be a valid image format image/jpeg image/gif image/png"
+    upload_image_error_message: "should be less than 5MB"
+

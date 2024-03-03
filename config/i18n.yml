@@ -1,0 +1,7 @@
+# config/i18n.yml
+translations:
+	- file: "app/javascript/locales/*.js"
+			only: "*.js"
+			format: "js"
+			include: [ "en", "vi" ]
+			fallbacks: true
