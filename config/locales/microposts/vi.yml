@@ -1,0 +1,9 @@
+vi:
+  form:
+    placeholder:
+      content: "Nhập nội dung"
+  invalid_message: "Lỗi xóa bài viết hoặc bạn không có quyền !"
+  content:
+    posted_time: "Đã đăng"
+  micropost_empty_list: "Danh sách bài đăng rỗng"
+

@@ -1,0 +1,4 @@
+const UPLOAD_IMAGE_SIZE = 1024
+export {
+    UPLOAD_IMAGE_SIZE
+}

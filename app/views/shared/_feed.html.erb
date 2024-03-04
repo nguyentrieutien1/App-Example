@@ -1,0 +1,4 @@
+<ol class="microposts">
+  <%= render(@microposts) || t("micropost_empty_list") %>
+</ol>
+<%== pagy_bootstrap_nav @pagy %>

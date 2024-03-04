@@ -1,0 +1,9 @@
+en:
+  form:
+    placeholder:
+      content: "Enter your content"
+  invalid_message: "Micropost invalid"
+  content:
+    posted_time: "Posted"
+  micropost_empty_list: "Micropost list is empty"
+
