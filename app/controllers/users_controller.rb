@@ -5,6 +5,19 @@ class UsersController < ApplicationController
   before_action :load_user, except: %i(new create index)
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
+  before_action :load_active_relationships, only: :show
+
+  def following
+    @title = t "following"
+    @pagy, @users = pagy @user.following, items: Settings["PERPAGE_5"]
+    render :show_follow
+  end
+
+  def followers
+    @title = t "followed"
+    @pagy, @users = pagy @user.followers, items: Settings["PERPAGE_5"]
+    render :show_follow
+  end
 
   def index
     @pagy, @users = pagy User.sorted_by_name, items: Settings["PERPAGE_5"]
@@ -52,6 +65,10 @@ class UsersController < ApplicationController
 
   private
 
+  def load_active_relationships
+    @relationship = current_user.active_relationships.find_by(followed_id: @user.id)
+  end
+
   def admin_user
     return if current_user.admin?
 
@@ -63,8 +80,7 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     return if @user
 
-    flash[:danger] = t "not_found.user"
-    redirect_to root_url
+    find_by_id_not_found t("not_found.user")
   end
 
   def correct_user

@@ -6,4 +6,6 @@ vi:
   content:
     posted_time: "Đã đăng"
   micropost_empty_list: "Danh sách bài đăng rỗng"
+  micropost_list: "Danh sách bài viết"
+  count: "Số lượng bài viết: %{count}"
 

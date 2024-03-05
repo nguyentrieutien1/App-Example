@@ -1,0 +1,6 @@
+en:
+  following: "following"
+  followers: "followers"
+  followed: "The user has been followed"
+  unfollowed: "The user has been unfollowed"
+  fail_action: "The action fail to handle the user"

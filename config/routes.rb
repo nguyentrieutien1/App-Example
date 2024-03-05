@@ -28,4 +28,13 @@ Rails.application.routes.draw do
 
   # Chapter/13
   resources :microposts, only: %i(new create destroy)
+
+  # Chapter/14
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
+  resources :relationships, only: %i(create destroy)
 end
